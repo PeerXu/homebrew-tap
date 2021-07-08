@@ -6,33 +6,33 @@ class Meepo < Formula
   desc "Meepo help you to build your private network over Internet in easy way.
 "
   homepage "https://github.com/PeerXu/meepo"
-  version "0.6.0"
+  version "0.7.0"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/PeerXu/meepo/releases/download/0.6.0/meepo_darwin_amd64.tar.gz"
-      sha256 "a3bb3713d7c0369c0b6b5ad1470d2ef6c3b38710ef2aed84d7d86d5797aac510"
+      url "https://github.com/PeerXu/meepo/releases/download/0.7.0/meepo_darwin_amd64.tar.gz"
+      sha256 "a29b94fe13dd36b342a6eaa923c56ea7c866e3f947af7002691f931971946fa5"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/PeerXu/meepo/releases/download/0.6.0/meepo_darwin_arm64.tar.gz"
-      sha256 "9f4a5e149d319f1e732d304d1cb93328d60b4b072356e0967214414bef1ba54e"
+      url "https://github.com/PeerXu/meepo/releases/download/0.7.0/meepo_darwin_arm64.tar.gz"
+      sha256 "12ac8ccdde5c555e28e834b5dd1b3128b074b4641345cc07222bdf3f8d5fbaa8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/PeerXu/meepo/releases/download/0.6.0/meepo_linux_amd64.tar.gz"
-      sha256 "b661ad1f83be574d6f36af3c50ce762b5ceaadd0979ff6b03698efe68d54764b"
+      url "https://github.com/PeerXu/meepo/releases/download/0.7.0/meepo_linux_amd64.tar.gz"
+      sha256 "7bef856f700c8ebba63b880a4dc6807f46bce60e17a30d868a72302caacdfe07"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/PeerXu/meepo/releases/download/0.6.0/meepo_linux_armv6.tar.gz"
-      sha256 "da668c30d94f544ce5b69148ce38ac3f59162ed9dbf122c5b14978c929fd202a"
+      url "https://github.com/PeerXu/meepo/releases/download/0.7.0/meepo_linux_armv6.tar.gz"
+      sha256 "dcef59939d711369d7bde53c87e48aa0486e21e206592d8377fc0faba92f7cdf"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PeerXu/meepo/releases/download/0.6.0/meepo_linux_arm64.tar.gz"
-      sha256 "05480fcc14bda35ffe39d620d3e032b31393cdfc5f7ed4b1ded2f08646c7ba29"
+      url "https://github.com/PeerXu/meepo/releases/download/0.7.0/meepo_linux_arm64.tar.gz"
+      sha256 "731240c678955dc430b62becb1184f91647c54fbd906aa786fc71c212f90f9fe"
     end
   end
 
