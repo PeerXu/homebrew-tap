@@ -6,38 +6,53 @@ class Meepo < Formula
   desc "Meepo help you to build your private network over Internet in easy way.
 "
   homepage "https://github.com/PeerXu/meepo"
-  version "0.7.0"
+  version "0.7.1"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/PeerXu/meepo/releases/download/0.7.0/meepo_darwin_amd64.tar.gz"
-      sha256 "a29b94fe13dd36b342a6eaa923c56ea7c866e3f947af7002691f931971946fa5"
+      url "https://github.com/PeerXu/meepo/releases/download/0.7.1/meepo_darwin_amd64.tar.gz"
+      sha256 "396debcf29cc7be4c8dc07556f06dc24622c3629e1c61b0e4235ba7d4ec3a236"
+
+      def install
+        bin.install "meepo"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/PeerXu/meepo/releases/download/0.7.0/meepo_darwin_arm64.tar.gz"
-      sha256 "12ac8ccdde5c555e28e834b5dd1b3128b074b4641345cc07222bdf3f8d5fbaa8"
+      url "https://github.com/PeerXu/meepo/releases/download/0.7.1/meepo_darwin_arm64.tar.gz"
+      sha256 "000728083300b79749ad89310683024e16ed16893fcfd262d7a3d39aab214017"
+
+      def install
+        bin.install "meepo"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/PeerXu/meepo/releases/download/0.7.0/meepo_linux_amd64.tar.gz"
-      sha256 "7bef856f700c8ebba63b880a4dc6807f46bce60e17a30d868a72302caacdfe07"
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/PeerXu/meepo/releases/download/0.7.0/meepo_linux_armv6.tar.gz"
-      sha256 "dcef59939d711369d7bde53c87e48aa0486e21e206592d8377fc0faba92f7cdf"
+      url "https://github.com/PeerXu/meepo/releases/download/0.7.1/meepo_linux_armv6.tar.gz"
+      sha256 "ac9f9e09ed1af61b820a461988c3204d7110de080fdd3d50067b06941a13288c"
+
+      def install
+        bin.install "meepo"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/PeerXu/meepo/releases/download/0.7.1/meepo_linux_amd64.tar.gz"
+      sha256 "a03e37cd7dd9ed370611eb1d9c554a007906b9349b49d8c2ccf9ad8dea4164eb"
+
+      def install
+        bin.install "meepo"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PeerXu/meepo/releases/download/0.7.0/meepo_linux_arm64.tar.gz"
-      sha256 "731240c678955dc430b62becb1184f91647c54fbd906aa786fc71c212f90f9fe"
-    end
-  end
+      url "https://github.com/PeerXu/meepo/releases/download/0.7.1/meepo_linux_arm64.tar.gz"
+      sha256 "adb99179c841cb7eae9f86df139b822e17f7cb0461196219aa478d5459edb860"
 
-  def install
-    bin.install "meepo"
+      def install
+        bin.install "meepo"
+      end
+    end
   end
 
   test do
